@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Brokie Watchlist</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f0f0f;
+      color: #eee;
+      font-size: 13px;
+      overflow: hidden;
+    }
+    .header {
+      background: #1a1a1a;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+    .title { font-weight: 600; }
+    .close {
+      cursor: pointer;
+      font-size: 18px;
+      color: #888;
+    }
+    .close:hover { color: #ff5555; }
+    .watchlist {
+      padding: 8px;
+      max-height: calc(100vh - 45px);
+      overflow-y: auto;
+    }
+    .symbol {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-bottom: 1px solid #222;
+      transition: background 0.1s;
+    }
+    .symbol:hover { background: #1f1f1f; }
+    .left { font-weight: 500; }
+    .price { font-size: 15.5px; font-weight: 600; }
+    .green { color: #22ff99; }
+    .red { color: #ff5555; }
+    .change { font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">Brokie Watchlist</div>
+    <div class="close" onclick="window.close()">✕</div>
+  </div>
+  <div class="watchlist" id="watchlist"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
